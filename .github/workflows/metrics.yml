@@ -50,21 +50,3 @@ jobs:
           plugin_people_limit: 24
           plugin_people_size: 28
           plugin_people_types: followers, following
-
-      - name: 🦑 Starred
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: starred.svg
-          token: NOT_NEEDED
-
-          # Options
-          user: zamelane
-          template: classic
-          base: ""
-          config_octicon: yes
-          config_timezone: Asia/Tomsk
-          plugin_topics: yes
-          plugin_topics_limit: 15
-          plugin_topics_mode: icons
-          plugin_topics_sort: stars
