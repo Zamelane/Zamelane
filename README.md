@@ -1,5 +1,7 @@
 <p align="center"><img src="https://komarev.com/ghpvc/?username=zamelane&color=brightgreen" alt="Profile views" width="110"></p>
 
+<kbd>
+  
 [<img align="left" width="420" alt="🦑" src="/github-metrics.svg">](#)
 
 <div>
@@ -79,7 +81,7 @@
     </p>
   </section>
 </div>
-
+</kbd>
 <!--
 **Zamelane/Zamelane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
