@@ -18,7 +18,6 @@ jobs:
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
-          filename: general.svg
           # Your GitHub token
           # The following scopes are required:
           #  - public_access (default scope)
@@ -76,11 +75,28 @@ jobs:
           plugin_anilist_medias: manga
           plugin_anilist_sections: favorites, characters
           plugin_anilist_shuffle: yes
-          plugin_anilist_user: Zamelane
-          plugin_steam: yes
-          plugin_steam_achievements_limit: 2
-          plugin_steam_games_limit: 1
-          plugin_steam_playtime_threshold: 2
-          plugin_steam_recent_games_limit: 1
-          plugin_steam_sections: player, most-played, recently-played
-          plugin_steam_user: 76561199060941524
+          plugin_anilist_user: ${{ secrets.ANILIST_USER }}
+
+      - name: 🦑 Starred
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: starred.svg
+          # Your GitHub token
+          # The following scopes are required:
+          #  - public_access (default scope)
+          # The following additional scopes may be required:
+          #  - read:org      (for organization related metrics)
+          #  - read:user     (for user related data)
+          #  - read:packages (for some packages related data)
+          #  - repo          (optional, if you want to include private repositories)
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Options
+          user: zamelane
+          template: classic
+          base: ""
+          config_octicon: yes
+          config_timezone: Asia/Tomsk
+          plugin_stars: yes
+          plugin_stars_limit: 4
